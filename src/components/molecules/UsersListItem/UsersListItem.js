@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from 'components/atoms/Button/button';
+import { Wrapper } from './UsersListItem.syles';
 
 const UsersListItem = ({ userData: {average, name, attendance = '0%' } }) => (
-    <li>
+    <Wrapper>
                 <div>{average}</div>
                 <div>
                     <p>{name}</p>
                     <p>{attendance}</p>
                 </div>
-                <button>X</button>
-                </li>
+                
+                    <Button />
+                </Wrapper>
 );
 
 UsersListItem.propTypes = {
